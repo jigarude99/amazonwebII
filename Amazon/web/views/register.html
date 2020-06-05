@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link type="text/css" href="../css/material-icons.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/register.css">
+  </head>
+  <body style="color: #222">
+    <div class="container-fluid">
+      <nav>
+        <div class="nav-wrapper blue darken-4">
+          <a href="./../" class="brand-logo left" style="padding-left: 10px;">
+            <i class="material-icons">home</i>Gandyson
+          </a>
+          <ul id="nav-mobile" class="right">
+            <li><a class="btn darken-1" href="./../views/login.html">Ingresar</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container blue darken-4" style="margin-top:3%; margin-bottom:3%; padding:1% 2% 2% 10%; width: 50%; min-width: 500px; border-radius: 16px;">
+        <h4 class="white-text">Registrate!</h4>
+        <form class="white-text">
+          <div class="row">
+            <div class="input-field col s5">
+              <input id="name" type="text" style="border-color: white;">
+              <label for="name" style="color: white">Nombre</label>
+            </div>
+              <div class="input-field col s5">
+              <input id="user" type="text" style="border-color: white;">
+              <label for="user" style="color: white">Usuario</label>
+            </div>
+          </div>
+          <div class="row">                         
+             <div class="input-field col s5">
+              <input id="cedula" type="text" style="border-color: white;">
+              <label for="cedula" style="color: white">Cédula</label>
+            </div>
+            <div class="input-field col s5">
+              <input id="phone" type="text" class="validate" style="border-color: white;">
+              <label for="phone" style="color: white">Número de Telefono</label>
+              <!--<span class="helper-text" data-error="wrong" data-success="right" id="emailValid"></span>-->
+            </div> 
+          </div>   
+          <div class="row">
+            <div class="input-field col s10">
+              <input id="password" type="password" class="validate" minlength="6" style="border-color: white;">
+              <label for="password" style="color: white">Contraseña</label>
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+                                     
+          </div>    
+          <div class="row">
+            <div class="input-field col s12">
+              <a onclick="register()" class="white-text darken-3 btn" id="reg">Registrar<i class="material-icons right">done</i></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/register.js"></script>
+  </body>
+</html>                              
