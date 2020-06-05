@@ -22,9 +22,9 @@ public class LoginServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    String json = req.getReader().lines().collect(Collectors.joining());
-    User user = mapper.readValue(json, User.class);
+    ObjectMapper mapper = new ObjectMapper();  
+    String json = req.getReader().lines().collect(Collectors.joining()); 
+    User user = mapper.readValue(json, User.class); 
 
     user.setPassword(Encryptor.getSHA256(user.getPassword(), user.getUsername().toLowerCase()));
 
