@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="lib" path="build/web/WEB-INF/lib/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="build/web/WEB-INF/lib/jackson-core-2.9.8.jar"/>
+	<classpathentry kind="lib" path="build/web/WEB-INF/lib/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="build/web/WEB-INF/lib/postgresql-42.2.5.jar"/>
+	<classpathentry kind="lib" path="jars/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="jars/jackson-core-2.9.8.jar"/>
+	<classpathentry kind="lib" path="jars/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="jars/javax.json-1.1.4.jar"/>
+	<classpathentry kind="lib" path="jars/javax.json-api-1.1.4.jar"/>
+	<classpathentry kind="lib" path="jars/postgresql-42.2.5.jar"/>
+	<classpathentry kind="output" path="build/web/WEB-INF/classes"/>
+</classpath>
