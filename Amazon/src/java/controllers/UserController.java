@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.ArrayList;
+
 import models.*;
 import helpers.PropertiesReader;
 import helpers.PoolManager;
@@ -165,4 +167,37 @@ public class UserController {
 		poolManager.returnConn(con);
 		return response;
 	}
+    public static Response<ArrayList<Product>> getUserProducts(User user) {
+        Connection con = poolManager.getConn();
+        Response<ArrayList<Product>> response = new Response<>();
+        ArrayList<Product> products = new ArrayList<>();
+        String query = prop.getValue("listProductsByUser");
+        try {
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, user.getId());
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                Product p = new Product();
+                p.setProductId(rs.getInt("product_id"));
+                p.setUserId(rs.getInt("user_id"));
+                p.setName(rs.getString("name"));
+                p.setDescription(rs.getString("description"));
+                p.setStock(rs.getInt("stock")); 
+                p.setPrice(rs.getDouble("price"));
+
+                products.add(p);
+            }
+
+            response.setStatus(200);
+            response.setMessage("Lista de productos obtenida");
+            response.setData(products);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.setStatus(500);
+            response.setMessage("Error DB");
+        }
+        poolManager.returnConn(con);
+        return response;
+    }
 }
